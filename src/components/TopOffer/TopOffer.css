@@ -1,0 +1,35 @@
+.top-offer {
+  background: linear-gradient(90deg, #c9f2d2 0%, #c4ebe0 45%, #bfe6f2 100%);
+}
+
+.top-offer__inner {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 9px;
+}
+
+.top-offer p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f3a2e;
+}
+
+.top-offer s {
+  color: #6b7a72;
+}
+
+.top-offer strong {
+  font-weight: 700;
+  color: #15321f;
+}
+
+@media (max-width: 600px) {
+  .top-offer__inner {
+    justify-content: center;
+  }
+
+  .top-offer p {
+    font-size: 0.78rem;
+    text-align: center;
+  }
+}

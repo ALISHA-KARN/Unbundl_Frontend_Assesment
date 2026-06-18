@@ -1,0 +1,82 @@
+.hero {
+  position: relative;
+  background-color: var(--color-bg-lavender);
+  /* subtle scalloped wave texture, like the Figma background */
+  background-image: radial-gradient(
+    circle at 10px 18px,
+    rgba(123, 79, 230, 0.06) 9px,
+    transparent 10px
+  );
+  background-size: 26px 26px;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+  min-height: 380px;
+}
+
+.hero__content {
+  padding-block: 56px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  max-width: 520px;
+}
+
+.hero__subtitle {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.hero__subtitle span {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.hero__media {
+  align-self: end;
+  justify-self: end;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero__media img {
+  max-height: 420px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+@media (max-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero__content {
+    padding-block: 40px 24px;
+    text-align: center;
+  }
+
+  .hero__title,
+  .hero__subtitle {
+    margin-inline: auto;
+  }
+
+  .hero__media {
+    justify-self: center;
+  }
+
+  .hero__media img {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,120 @@
+.dream {
+  background: var(--color-bg-blue);
+}
+
+.dream__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.dream__content .section-title {
+  max-width: 360px;
+  margin-bottom: 22px;
+}
+
+.dream__content p {
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  margin-bottom: 16px;
+  max-width: 460px;
+}
+
+/* pricing card */
+.dream__card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: var(--shadow);
+}
+
+.dream__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dream__card-top h3 {
+  font-size: 1.4rem;
+}
+
+.dream__case {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dream__old {
+  margin-top: 18px;
+  color: var(--color-muted);
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+.dream__price {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin-top: 2px;
+}
+
+.dream__price strong {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  color: var(--color-primary);
+}
+
+.dream__tax {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.dream__perks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.dream__perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.dream__check {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-success);
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.dream__learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: gap 0.2s ease;
+}
+
+.dream__learn:hover {
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .dream__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .dream__content .section-title,
+  .dream__content p {
+    max-width: none;
+  }
+}

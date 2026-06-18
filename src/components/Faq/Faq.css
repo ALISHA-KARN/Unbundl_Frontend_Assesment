@@ -1,0 +1,108 @@
+.faq__title {
+  margin-bottom: 44px;
+}
+
+.faq__title span {
+  color: var(--color-primary);
+}
+
+.faq__list {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.faq__question-wrap {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  padding: 22px 4px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-heading);
+  transition: color 0.2s ease;
+}
+
+.faq__question:hover {
+  color: var(--color-primary);
+}
+
+/* plus / minus toggle drawn with pseudo-elements */
+.faq__toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.faq__toggle::before,
+.faq__toggle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: var(--color-heading);
+  border-radius: 2px;
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.faq__toggle::before {
+  width: 16px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.faq__toggle::after {
+  width: 2px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+
+/* open → vertical bar collapses so the "+" becomes a "−" */
+.faq__item.is-open .faq__toggle::after {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.faq__item.is-open .faq__toggle::before {
+  background: var(--color-primary);
+}
+
+/* smooth expand/collapse */
+.faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq__item.is-open .faq__panel {
+  grid-template-rows: 1fr;
+}
+
+.faq__panel-inner {
+  overflow: hidden;
+}
+
+.faq__panel-inner p {
+  padding: 0 4px 22px;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  max-width: 760px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__panel {
+    transition: none;
+  }
+}

@@ -1,0 +1,77 @@
+.clove {
+  padding-block: 28px 8px;
+  background: #fff;
+}
+
+.clove__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--color-bg-blue);
+  border-radius: 16px;
+  padding: 26px 34px;
+}
+
+.clove__text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-heading);
+  max-width: 560px;
+}
+
+.clove__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.clove__logo {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #d9531e;
+  line-height: 1;
+}
+
+.clove__logo-smile {
+  color: #d9531e;
+}
+
+.clove__logo-tag {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: #d9531e;
+}
+
+.clove__find {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.clove__find:hover {
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .clove__box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .clove__right {
+    align-items: flex-start;
+  }
+}

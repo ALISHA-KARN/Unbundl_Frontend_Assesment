@@ -1,0 +1,44 @@
+.benefits {
+  background: linear-gradient(90deg, #c9f2d2 0%, #c3ebdf 50%, #bfe6f2 100%);
+  overflow: hidden;
+  padding-block: 12px;
+}
+
+.benefits__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: benefits-scroll 30s linear infinite;
+}
+
+.benefits__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-inline: 22px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #1f3a2e;
+  white-space: nowrap;
+}
+
+.benefits__dot {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+}
+
+@keyframes benefits-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefits__track {
+    animation: none;
+  }
+}

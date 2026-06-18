@@ -1,0 +1,125 @@
+.smilers__title {
+  margin-bottom: 44px;
+}
+
+.smilers__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.smilers__card {
+  position: relative;
+  aspect-ratio: 3 / 4.4;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.smilers__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(123, 79, 230, 0.4);
+}
+
+.smilers__card--skeleton {
+  background: linear-gradient(180deg, #d9ccf7, #b8a2ef);
+  animation: smilers-pulse 1.4s ease infinite;
+}
+
+.smilers__logo {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.smilers__quote-mark {
+  position: absolute;
+  top: 40px;
+  left: 14px;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 0.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.smilers__caption {
+  position: relative;
+}
+
+.smilers__text {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.smilers__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.smilers__tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* error */
+.smilers__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.smilers__error p {
+  color: var(--color-muted);
+}
+
+@keyframes smilers-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smilers__card--skeleton {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .smilers__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .smilers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
